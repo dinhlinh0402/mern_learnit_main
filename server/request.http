@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "dlinh",
+    "password": "linh"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+content-type: application/json
+
+{
+    "username": "dinhlinh1",
+    "password": "linh"
+}
+
+###
+POST http://localhost:5000/api/posts
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZTc0ZDYzNzFiZjI1ZWMxOTE1YzQiLCJpYXQiOjE2MjU5MDU2MzJ9.EFbrGEW3Bj8J_9V0w9VfPT-xWfVFF57IetbjLUifW8U
+
+{
+    "title": "Nodejs",
+    "description": "Nodejs",
+    "url": "https://www.youtube.com/watch?v=mf4upAPwHEo",
+    "status": "TO LEARN"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZTc0ZDYzNzFiZjI1ZWMxOTE1YzQiLCJpYXQiOjE2MjQ2OTY2MjB9.fe9gzDNrs2WxfNBAycfOA7Jtljsp-2kiJ04PJrezpco
+
+###
+PUT http://localhost:5000/api/posts/60d60cdb254a432710e55391
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZTc0ZDYzNzFiZjI1ZWMxOTE1YzQiLCJpYXQiOjE2MjQ2OTY2MjB9.fe9gzDNrs2WxfNBAycfOA7Jtljsp-2kiJ04PJrezpco
+
+{
+    "title": "Vue",
+    "description": "Vueeee",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+}
+
+### 
+DELETE http://localhost:5000/api/posts/60d60cf4254a432710e55393
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZTc0ZDYzNzFiZjI1ZWMxOTE1YzQiLCJpYXQiOjE2MjQ3MDA2NzB9.D_J03Sp50fqXv30dY9dqXOZKt_btBtV-Pirp4gDbZXs
